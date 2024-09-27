@@ -96,7 +96,6 @@ function ColorTool({
             style={
               isGradient
                 ? {
-                    background: '#718096',
                     background: `linear-gradient(90deg, ${gradColors.colorOne} 0%, ${gradColors.colorTwo} 100%)`,
                   }
                 : {
