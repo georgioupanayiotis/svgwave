@@ -154,8 +154,6 @@ function Home({ isDark, toggleDarkMode }) {
   }
 
   const handleExporWebP = () => {
-    const svgElement = svgRef.current // Get the SVG element reference
-
     // Create a canvas element to draw the SVG
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
@@ -190,7 +188,7 @@ function Home({ isDark, toggleDarkMode }) {
       }, 'image/webp')
     }
     // Encode the SVG string and set the image source
-    img.src = 'data:image/svg+xml;base64,' + window.btoa(svgString)
+    img.src = `data:image/svg+xml;base64,${window.btoa(svgString)}`
   }
 
   return (
