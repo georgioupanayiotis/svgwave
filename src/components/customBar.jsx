@@ -73,10 +73,6 @@ function CustomBar({
     setAnimateWave((animateWave) => !animateWave)
   }
 
-  const handleClickWebP = () => {
-    exportWebP()
-  }
-
   return (
     <div className="z-10 flex flex-col items-center w-3/4 h-full bg-white sm:m-5 xs:mt-12 md:mt-4 sm:rounded-lg sm:w-2/5 lg:w-1/4 xl:w-1/5 sm:h-full custom-bar dark:bg-darkish-black dark:text-white">
       <div className="flex-1 p-4 pt-7">
@@ -239,7 +235,7 @@ function CustomBar({
           </button>
           <button
             className="px-4 py-1 bg-white rounded-md cursor-pointer text-md export-svg dark:text-black"
-            onClick={handleClickWebP}
+            onClick={() => exportWebP()}
           >
             webp
           </button>
